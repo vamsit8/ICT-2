@@ -10,7 +10,7 @@
 <body>
 <?php include("include/nav.inc") ?>
     <div class="container">
-    	<form action="member_process.php" method="post">
+    	<form action="pro.php" method="post">
         
         	<h1>Registration form</h1>
            
@@ -86,7 +86,23 @@ input[type=submit]:hover {
 
 
 <div class="container">
-  <form action="/action_page.php">
+  
+     <div class="row">
+       <div class="col-25">
+        <label for="fname">Profile picture</label>
+      </div>
+      <div class="col-75">
+            <input type="file" name="fileToUpload" id="fileToUpload">
+      </div>
+      </div>
+      <div class="row">
+      <div class="col-25">
+        <label for="fname">User name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="username" name="username" placeholder="username">
+      </div>
+    </div>
     <div class="row">
       <div class="col-25">
         <label for="fname">First Name</label>
@@ -108,7 +124,7 @@ input[type=submit]:hover {
         <label for="Education">Mobile number</label>
       </div>
        <div class="col-75">
-        <input type="number" id="mobile number" name="address" placeholder="enter your contact number" >
+        <input type="tel" id="mobile_number" name="mobile_number" placeholder="enter your contact number" >
       </div>
       
     </div>
@@ -118,6 +134,14 @@ input[type=submit]:hover {
       </div>
       <div class="col-75">
         <textarea id="address" name="address" placeholder="enter the address" style="height:100px"></textarea>
+      </div>
+    </div>
+      <div class="row">
+      <div class="col-25">
+        <label for="fname">postcode</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="postcode" name="postcode" placeholder="postcode">
       </div>
     </div>
         <div class="row">
@@ -136,30 +160,20 @@ input[type=submit]:hover {
         <input type="text" id="Password" name="password" placeholder="Password">
       </div>
     </div>
-        <div class="row">
-      <div class="col-25">
-        <label for="fname">re-enter Password</label>
-      </div>
-      <div class="col-75">
-        <input type="text" id="re-enter" name="re-enter" placeholder="re-enter Password">
-      </div>
-    </div>
-        <div class="row">
-      <div class="col-25">
-        <label for="fname">University/Company</label>
-      </div>
-      <div class="col-75">
-        <input type="text" id="university" name="university" placeholder="institution">
-      </div>
-    </div>
+
+       
+       
     <div class="row" >
         <div class="col-4"></div>
         <div class="col-4" style="margin-left: ">
+          <br>
         
-      <input type="submit" value="Register" style="margin-left: 200px;">
+      <input type="submit" value="Register" style="margin-right: 600px;font-size: 20px">
     </div>
      <div class="col-4"></div>
   </form>
+</div>
+</div>
 </div>
 
 </body>
@@ -168,4 +182,7 @@ input[type=submit]:hover {
   
 
 </html>
+<br>
+<br>
+
 <?php include("include/footer.inc") ?>
