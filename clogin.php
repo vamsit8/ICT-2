@@ -10,7 +10,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-<div class="container1">
+<div class="container">
   <div style="text-align:center">
 <h2>Welcome to Golden Lor login page</h2>
 <p>please fill in the log-in details below</p>
@@ -19,18 +19,23 @@
 <form action="cloginprocess.php" method="post">
   <div class="container">
     <label for="uname"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="uname" required>
+    <input type="text" placeholder="Enter Username" name="uname" required><br>
+
 
     <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
+    <input type="password" placeholder="Enter Password" name="psw" required><br>
+
         
     <button type="submit">Login</button>
     <label>
       <input type="checkbox" checked="checked" name="remember"> Remember me
     </label>
   <div class="container" style="background-color:#f1f1f1">
+    <label>
+
     <button type="button" class="cancelbtn">Cancel</button>
     <span class="psw">Forgot <a href="#">password?</a></span>
+  </label>
   </div>
   </div>
 </form>
