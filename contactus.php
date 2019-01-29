@@ -75,10 +75,28 @@ input[type=submit]:hover {
 
     }
 }
+.rightpanel {
+    clear:both; float:right;text-align:center;font-size:1.0em;
+    margin-right: .2em; width:100%; margin-left:1em; margin-bottom:30px;
+}
+.rightpanel h1 {
+     text-align:center; font-size: 2.0em; margin:0px; font-style:normal;
+    padding-left:0.3em; padding-right:0.3em; padding-top:0.2em; padding-bottom:0.2em;text-decoration: none;
+}   
 </style>
 </head>
-<body>
 <?php include("include/nav.inc") ?>
+<body>
+
+  <div class ="rightpanel">
+            <h1> get in touch with us through phone or email</h1>
+            <p> call us at (07)56081011</p>
+            <p> Email us at :</p>
+            <a href ="mailto:vamsi.t8@gmail.com" target="_top"> Goldenlor@gmail.com</a>
+        </div> 
+        <div class="contact-map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14117.131493065865!2d153.1019154!3d-27.8010625!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4856d19e2fee8018!2sGolden+Lor+Yarrabilba!5e0!3m2!1sen!2sau!4v1518798158547" width="1350" height="450"
+    frameborder="0" style="border :allowfullscreen"></iframe>
 <div class="container" style="font-family: font-family: Arial, Helvetica, sans-serif;">
   <div style="text-align:center">
     <h2>Welcome to The Goldenlor contact us page </h2>

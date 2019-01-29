@@ -3,7 +3,7 @@
 define("MYSQLUSER","root");
 define("MYSQLPASS","");
 define("HOSTNAME","localhost");
-define("MYSQLDB","thelor");
+define("MYSQLDB","lastthelor");
 
 //make connection to database
 function db_connect()
