@@ -9,7 +9,7 @@ include_once('include/config.php');
 	<title>Add/Edit Product</title>
 	<?php include("include/head.inc") ?>
 	<link rel="stylesheet" href="CSS/productedit.css">
-	
+
 </head>
 <body>
 	<?php include("include/nav.inc") ?>
@@ -17,13 +17,13 @@ include_once('include/config.php');
 	if(isset($_POST['action'])){
 		$productid = $_POST['action'];
 		$conn  = db_connect();
-		$sql = "SELECT * FROM products where product_id= ".$productid;
+		$sql = "SELECT * FROM products where pid= ".$productid;
 	 $result = $conn->query($sql);
 	 if ($result->num_rows > 0) {
 		 while($row = $result->fetch_assoc()) {
 				$pname = $row["pname"];
+				$pdescription = $row["description"];
 				$pprice = $row["product_price"];
-				$description = $row["description"];
 				$category = $row["category"];
 				
 		 }
@@ -40,15 +40,15 @@ include_once('include/config.php');
                 	<label for="name">* Product ID:</label>
                 </div>
 				<div class="col-md-4">  
-					<input type="text" id="product_id" name="product_id" size="30" maxlength="50" value= "<?php echo $productid ?>"  />
+					<input type="text" id="pid" name="pid" size="30" maxlength="50" value= "<?php echo $product_id ?>"  />
 				</div>
             </div>
 			<div class="row">
 				<div class="col-md-4">
-                	<label for="pname">* Name:</label>
+                	<label for="name">* Name:</label>
                 </div>
 				<div class="col-md-4">  
-					<input type="text" id="pname" name="pname" size="30" maxlength="50" value= "<?php echo $pname ?>" required />
+					<input type="text" id="name" name="name" size="30" maxlength="50" value= "<?php echo $pname ?>" required />
 				</div>
 				<div class="col-md-4">
 					<span id="name_msg" class="error_msg"></span>
@@ -70,15 +70,15 @@ include_once('include/config.php');
                 	<label for="pprice">* Product Price:</label>
                 </div>
 				<div class="col-md-4"> 
-					<input type="number" id="product_price" name="product_price" step="0.01" value= "<?php echo $pprice ?>" required />
+					<input type="number" id="pprice" name="pprice" step="0.01" value= "<?php echo $product_price ?>" required />
                 </div>
 				<div class="col-md-4">
-					<span id="product_price_msg" class="error_msg"></span>
+					<span id="wrprice_msg" class="error_msg"></span>
                 </div>
             </div>
             <div class="row">
 				<div class="col-md-4">
-                	<label for="category">* Category:</label>
+                	<label for="numavailable">* Category:</label>
 				</div>
 				<div class="col-md-4">
                     <input type="text" id="category" name="category" value= "<?php echo $category ?>" required />
@@ -87,7 +87,7 @@ include_once('include/config.php');
 					<span id="num_msg" class="error_msg"></span>
                 </div>
             </div>
-			
+
 		 <div class="row">
 		 <div class="col-md-1">
 		 </div>
@@ -99,9 +99,9 @@ include_once('include/config.php');
         </form>
 		</div>
 	</div>
-	
-	
-	
+
+
+
   <?php include("include/footer.inc") ?>
 </body>
-</html>
+</html> 

@@ -18,7 +18,6 @@ include_once('include/config.php');
 	 $conn  = db_connect();
 	 $sql = "SELECT * FROM products";
 	 $result = $conn->query($sql);
-
 if ($result->num_rows > 0) {
     // output data of each row?>
 	<div class="container" style="text-align: center;">
@@ -33,12 +32,12 @@ if ($result->num_rows > 0) {
 		
 		  <div class="card">
 				<div class="col" style="padding: 20px;">
-					  
+
 					<?php
 						echo "<img class = \"picture\" src=\"".$row["image"]."\">"
 					?>
 				</div>
-			
+
 			<div class = "row">
 				<?php echo "<h3>".$row["pname"]."</h3>" ?>
 			</div>
@@ -56,9 +55,9 @@ if ($result->num_rows > 0) {
 				<form action="editproduct.php" method="post">
 					<?php echo "<button type=\"submit\" class=\"btn btn-primary\" name=\"action\" value=\"".$row["product_id"]."\" /> Edit Product </button>" ?>
 				</form>
-				
+
 			</div></div>
-		
+
 		<?php
 	}?>
 	</div></div></div>
@@ -68,10 +67,10 @@ if ($result->num_rows > 0) {
 }
 $conn->close();
 	?>
-	
+
   <?php include("include/footer.inc") ?>
 </body>
 </html>
 <style>
 	img {text-align: center;}
-</style>
+</style> 

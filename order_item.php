@@ -64,28 +64,51 @@ include("include/config.php");
                 <?php 
 
                 $conn  = db_connect(); 
-                $query = "SELECT * FROM order_item ORDER BY order_id DESC" ;  
+                $query = "SELECT order_id FROM orders" ;  
                 $result = mysqli_query($conn, $query);  
-                if(mysqli_num_rows($result) > 0)  
+                if(mysqli_num_rows($result) > 0)    
                 {     
                      while($row = mysqli_fetch_array($result))  
-                     { ?>
-        
+                     { 
+
+                       $query2 = "SELECT * FROM order_item where order_id = '".$row["order_id"]."'" ;
+                       $result2 = mysqli_query($conn, $query2);  
+
+              
+?>
+
                                <div class="col-md-3">
                                      <div class="card-body">
                                           <div class="card">
-                          
 
                               <h4 class="card-title">Order_item details</h4>
+                              <label for="name">order id</label>
+                              <h4 class="text-info"><?php echo $row["order_id"]; ?></h4>
+                                
+<?php
+                if(mysqli_num_rows($result2) > 0)    
+                {     
+                     while($row2 = mysqli_fetch_array($result2))  
+                     { 
+
+
+                       ?>
+                          <div class="dropdown" >
+
+                        <div class="dropdown-content">
+                       <div class="container" style="padding: 5px;" >
+                        <div class="card" style="background-color: #ccffff;">
+                        
                                 <label for="name">product id</label> 
-                                <h4 class="text-info"><?php echo $row["product_id"]; ?></h4> 
-                                <label for="name">order id</label>
-                               <h4 class="text-info"><?php echo $row["order_id"]; ?></h4>
-                               <label for="name">Quantity</label>  
-                               <h4 class="text-info"><?php echo $row["quantity"]; ?></h4>
+                                <h4 class="text-info"><?php echo $row2["product_id"]; ?></h4> 
+                                
+                               <label for="name">Quantity</label> 
+                               <h4 class="text-info"><?php echo $row2["quantity"]; ?></h4>
                                <label for="name">Price</label>
-                                <h4 class="text-info"><?php echo $row["price"]; ?></h4>
-                      
+                                <h4 class="text-info"><?php echo $row2["price"]; ?></h4></div></div></div></div>
+
+
+<?php }} ?>                      
                                
 
                </div>
@@ -102,3 +125,8 @@ include("include/config.php");
            
 </body>
 </html>
+<style>
+.dropdown:hover .dropdown-content {
+  display: block;}
+
+</style>
