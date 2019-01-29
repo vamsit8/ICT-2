@@ -52,6 +52,9 @@ include("include/config.php");
         <li class="nav-item">
         <a class="nav-link" href="adminlogout.php"> logout</a>
         </li>
+         <li class="nav-item">
+        <a class="nav-link" href="editproducts.php"> Edit Products</a>
+        </li>
       </ul>
     </div>
   </div>
