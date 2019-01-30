@@ -46,7 +46,7 @@
               <br>
           </br>
 
-
+<!--
             <div class="row">
             	<div class="col">
                 	<label>&nbsp;</label>
@@ -54,6 +54,7 @@
         
                 </div>
             </div>
+            !-->
         </div>
         </div>
         </form>
