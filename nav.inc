@@ -1,4 +1,4 @@
-    <div class="image" href="index.php" style="background-color: #14141f;position: center; text-align: center;"> <img src="img/logo-full.png" style="  margin-left: auto;margin-right: auto; background-color: #14141f;"><span style="font-size: 20px;color: white;float: right;padding: 20px;">PH :0462852688</span></div> 
+    <div class="image" href="index.php" style="background-color: #14141f;position: center; text-align: center;"> <img src="img/logo-full.png" style="  margin-left: auto;margin-right: auto; background-color: #14141f;"><span style="font-size: 20px;color: white;float: right;padding: 20px;">PH :0462852688</span></div> <!--The image base -->
    
 
     <?php if(isset($_SESSION["admin_login"])):?>
