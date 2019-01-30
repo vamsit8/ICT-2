@@ -5,14 +5,64 @@ session_start();
 include_once('include/config.php');
 ?>
 <html lang="en">
-<head>
-	<title>Add/Edit Product</title>
-	<?php include("include/head.inc") ?>
-	<link rel="stylesheet" href="CSS/productedit.css">
+
+	<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Golden Lor</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  <link href="newstyles.css" rel="stylesheet" type="text/css">
+     
+
+   <nav class="navbar navbar-expand-md navbar-light bg-light bg-light sticky-top">
+      <!--- md for breakpoint for pixel to expanded full site navigation , nav light color and background light sticky to fix navigation-->
+  <div class="conainer-fluid">
+    <!-- container fluid for 100% of screen-->
+    <a class="navbar-brand" href=""><img src="img/logo-full.png" class="img-fluid"></a> 
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+      <!--  toggle switch for navigation , collapse for navigation to collapse -->
+      <span class="navbar-toggler-icon"></span>
+    <!-- class for navbar-->
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+      <!-- ml-auto to push navigation when its full width to right , usually in middle -->
+        <li class="nav-item acive">
+          <a class="nav-link" href="index.php">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="menu.php">Menu</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="aboutus.php">About us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contactus.php">Contact us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="orders.php">Orders</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="adminlogout.php"> logout</a>
+        </li>
+         <li class="nav-item">
+        <a class="nav-link" href="editproducts.php"> Edit Products</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
 
 </head>
+
+
 <body>
-	<?php include("include/nav.inc") ?>
+	
+
 	<?php
 	if(isset($_POST['action'])){
 		$productid = $_POST['action'];
